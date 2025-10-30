@@ -46,11 +46,11 @@ done
 
 ### Решение 1.
 
-1. Создадим директорию и файлы в соответствии условиями.  
+1. Создаем директорию и файлы в соответствии условиями задания.  
 
 <img src = "img/1-1.png" width = 60%>    
 
-2.  Создадим коммит с описанием и отправим его в ветку main.  
+2.  Сделаем коммит с описанием и отправим его в ветку main.  
 `git branch -m main`  
 `git commit -am 'prepare for merge and rebase'`
 
@@ -98,7 +98,7 @@ done
 
 ### Решение 2.
 
-1. Создадим ветку `git-merge`.
+1. Создадим ветку `git-merge`.  
 `git checkout -b git-merge`    
 
 <img src = "img/2-1.png" width = 60%>      
@@ -144,7 +144,7 @@ echo "====="
 
 ### Решение 3.
 
-1. Вернемся в ветку main. 
+1. Вернемся в ветку main.   
 `git checkout main`   
 
 <img src = "img/3-1.png" width = 60%>      
@@ -187,16 +187,14 @@ echo "====="
 
 ### Решение 4.
 
-1. Найдём хеш коммита `prepare for merge and rebase` и выполним `git checkout` на него так: 
-`git checkout main`   
-
+1. Найдём хеш коммита `prepare for merge and rebase` и выполним `git checkout` на него.   
 `git log --oneline`  
-`git log --oneline`
+`git checkout main`    
 
 <img src = "img/4-1-1.png" width = 60%>      
 <img src = "img/4-1-2.png" width = 60%> 
 
-2. Создадим ветку `git-rebase`, основываясь на текущем коммите.  
+1. Создадим ветку `git-rebase`, основываясь на текущем коммите.  
 `git checkout -b git-rebase`   
 
 <img src = "img/4-2.png" width = 60%>
@@ -399,11 +397,11 @@ Fast-forward
 
 ### Решение 7.
 
-1-2. Переключимся на ветку main. 
+1-2. Переключимся на ветку main.   
 `git checkout git-rebase`  
-Выполним rebase в интерактивном режиме (-i).  
-`git rebase -i main`.
-В открывшемся окне редактора изменим второй коммит, указав слева `fixup`.  
+Выполним rebase в интерактивном режиме (-i).    
+`git rebase -i main`.  
+В открывшемся окне редактора изменим второй коммит, указав слева `fixup`.    
 
 <img src = "img/7-1-2-2.png" width = 60%>
 
@@ -447,7 +445,7 @@ Fast-forward
 Сделаем пуш всех веток.         
 `git push -u origin --all`  
 
-**Ссылка на удаленный репозиторий**  
+**Ссылка на удаленный репозиторий c тремя ветками**  
 https://github.com/YuryShelukhin/version-3-task
 
 
